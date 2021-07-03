@@ -1,0 +1,32 @@
+{ 
+    "name": "PST2",
+    "observer": false,
+    "rollback": false,
+    "only_update_on_change": false,
+    "only_transmit_on_change": false,
+    "source_only": false,
+    "uninterruptible": true,
+	"coreType":"zmq",
+    "max_iterations": 10,
+    "period": 0.005,
+    "offset": 0.0,
+    "time_delta": "1ms",
+    "output_delay": 0,
+    "input_delay": 0,
+    
+    "publications": [
+	{
+	    "global" : true,
+        "key": "send_fed2",
+	    "type": "double"
+    }
+    ],
+	
+	"subscriptions": [
+    {
+        "global" : true,
+        "type": "double",
+        "key" : "send_fed1"
+    }
+    ]
+}
