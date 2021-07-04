@@ -18,14 +18,14 @@
 	{
 	    "global" : true,
         "key": "send_fed2",
-	    "type": "double"
+	    "type": "complex"
     }
     ],
 	
 	"subscriptions": [
     {
         "global" : true,
-        "type": "double",
+        "type": "complex",
         "key" : "send_fed1"
     }
     ]
