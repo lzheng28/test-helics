@@ -6,7 +6,7 @@
 
 int main(){
     std::cout << "-------------!!!helics test: HELICS Version: " << helics::versionString << std::endl;
-    std::string configFile = "/home/lei/Desktop/federates/helics_config_1.json";
+    std::string configFile = "/home/lei/Desktop/test-helics/federates/helics_config_1.json";
     helics::ValueFederate fed(configFile);
     helics::Publication pub;
     helics::Input sub;
@@ -34,17 +34,24 @@ int main(){
     for(int i = 0; i < pubCount; i++) {
         pub = fed.getPublication(i);
         std::string pubInfo = pub.getInfo();
-        double pub_info = 1.0;
+        // double pub_info = 1.0;
+        auto pub_info = helics::helicsGetComplex(helics::helicsComplexString(1, 1));
+
+        // pub_info.real = 1, pub_info.imag = 1;
         pub.publish(pub_info);
     }
 
-    double subvalue = 0.0;
+    // helics_requestTime = 0.05;
+    double helics_grantime;
+    helics_grantime = fed.requestTime(helics_requestTime);
+
+    // double subvalue = 0.0;
     
     for(int i = 0; i < subCount; i++) {
         sub = fed.getInput(i);
         printf("-------------!!!helics debug entering  sub loop\n"); 
         // if(sub.isUpdated()) {
-        subvalue = fed.getDouble(sub);
+        auto subvalue = fed.getDouble(sub);
         // subvalue = fed.getDouble(sub);
         // printf("-------------!!!Helics sub value: %s \n", subvalue);
         std::cout << "fed 1 subvalue:  " << subvalue << std::endl;
