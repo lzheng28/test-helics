@@ -17,16 +17,16 @@
     "publications": [
         {
             "global" : true,
-            "key": "send_fed2",
-            "type": "complex"
+            "type": "complex",
+            "key" : "send_fed2"
         }
     ],
 	
 	"subscriptions": [
         {
             "global" : true,
-            "type": "complex",
-            "key" : "send_fed1"
+            "key": "send_fed1",
+            "type": "complex"
         }
     ]
 }
