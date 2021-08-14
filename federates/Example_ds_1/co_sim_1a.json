@@ -1,0 +1,18 @@
+{
+    "broker": true,
+    "federates":[
+        {
+            "directory":"/home/lei/Install_package/GridPACK-renke/src/build/applications/dynamic_simulation_full_y/",
+            "exec":"../hadrec/hadrec.x input_300_cmpld.xml",
+            "host":"localhost",
+            "name":"TransmissionFederate"
+        },
+        {
+            "directory":"/home/lei/Desktop/test-helics/federates/Distribution",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate"
+        }
+    ],
+    "name":"T-D-Cosimulation-HELICSRunner"
+}
