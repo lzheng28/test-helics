@@ -3,7 +3,7 @@
     "federates":[
         {
             "directory":"./Transmission/",
-            "exec":"hadrec.x input_300_cmpld.xml",
+            "exec":"pf.x input_118.xml",
             "host":"localhost",
             "name":"TransmissionFederate"
         },

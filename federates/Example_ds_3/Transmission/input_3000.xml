@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Configuration>
   <Powerflow>
-    <networkConfiguration> 300bus_v23_no0imp_pslf.raw </networkConfiguration>
+    <networkConfiguration> bus3000_gen_no0imp_v23_pslf.raw </networkConfiguration>
     <maxIteration>20</maxIteration>
     <tolerance>1.0e-8</tolerance>
     <qLimit>True</qLimit>
@@ -57,33 +57,31 @@
 
     <Helics>
       <connectNode> 7 </connectNode>
-      <configFile> helics_config_1.json </configFile>
+      <configFile> /home/lei/Desktop/test-helics/federates/helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>
     </Helics>
 
     <!--<networkConfiguration> IEEE3G9B_V23.raw </networkConfiguration>-->
-    <!--generatorParameters> 300bus_detail_model_cmpld_motorW.dyr </generatorParameters-->
-    <generatorParameters> 300bus_detail_model_cmpld_combine.dyr </generatorParameters>
+    <generatorParameters> classical_model_3000bus.dyr </generatorParameters>
     <simulationTime>20</simulationTime>
     <timeStep>0.001</timeStep>
     <faultEvents>
       <faultEvent>
-        <beginFault> 2.02</beginFault>
-        <endFault>   2.06</endFault>
-        <faultBranch>90  92</faultBranch>
-
+        <beginFault> 1.02</beginFault>
+        <endFault>   1.07</endFault>
+        <faultBranch>188 190</faultBranch>
         <timeStep>   0.001</timeStep>
       </faultEvent>
     </faultEvents>
     <generatorWatch>
       <generator>
-       <busID> 10063 </busID>
+       <busID> 190 </busID>
        <generatorID> 1 </generatorID>
       </generator>
     </generatorWatch>
     <generatorWatchFrequency> 1 </generatorWatchFrequency>
-    <generatorWatchFileName> 300bus_cmpld_gridpack_test_gen10063_helics.csv </generatorWatchFileName>
+    <generatorWatchFileName> bus3000_gridpack_test_gen190_helics.csv </generatorWatchFileName>
     <LinearSolver>
       <SolutionTolerance>1.0E-12 </SolutionTolerance> 
       <ForceSerial>true</ForceSerial>
