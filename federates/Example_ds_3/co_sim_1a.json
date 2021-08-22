@@ -3,7 +3,7 @@
     "federates":[
         {
             "directory":"./Transmission/",
-            "exec":"hadrec.x input_3000.xml",
+            "exec":"/home/lei/package/GridPACK_ds/src/build/applications/hadrec/hadrec.x input_3000.xml",
             "host":"localhost",
             "name":"TransmissionFederate"
         },
