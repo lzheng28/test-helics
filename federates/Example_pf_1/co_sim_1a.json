@@ -3,7 +3,7 @@
     "federates":[
         {
             "directory":"./Transmission/",
-            "exec":"pf.x input_118.xml",
+            "exec":"/home/lei/package/GridPACK_pf/src/build/applications/powerflow/pf.x input_118.xml",
             "host":"localhost",
             "name":"TransmissionFederate"
         },

@@ -1,7 +1,7 @@
 clock {
     timezone PST8;
     starttime '2013-08-28 00:00:00';
-    stoptime '2013-08-28 00:00:30';
+    stoptime '2013-08-29 00:00:00';
 }
 
 #include "include/schedules/appliance_schedules.glm";
@@ -9,7 +9,7 @@ clock {
 #include "include/schedules/commercial_schedules.glm";
 #define stylesheet=http://gridlab-d.svn.sourceforge.net/viewvc/gridlab-d/trunk/core/gridlabd-2_0;
 
-#set minimum_timestep=1.000000;
+#set minimum_timestep=300.000000;
 #set profiler=1;
 #set relax_naming_rules=1;
 #set randomseed=10;
@@ -6815,7 +6815,7 @@ object triplex_load {
 object recorder {
     parent network_node;
     file output/IEEE_123_feeder_0_swing_node_4.csv;
-    interval 1;
+    interval 300;
     in "2013-08-28 00:00:00";
     out "2013-08-29 00:00:00";
     property positive_sequence_voltage,distribution_load;
