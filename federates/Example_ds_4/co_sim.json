@@ -1,0 +1,30 @@
+{
+    "broker": true,
+    "federates":[
+        {
+            "directory":"./Transmission/",
+            "exec":"/home/lei/Install_package/GridPACK-ds/src/build/applications/hadrec/hadrec.x input_3000.xml",
+            "host":"localhost",
+            "name":"TransmissionFederate"
+        },
+        {
+            "directory":"./Distribution/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate"
+        },
+        {
+            "directory":"./Distribution_2/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_2"
+        },
+        {
+            "directory":"./Distribution_3/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_3"
+        }
+    ],
+    "name":"T-D-Cosimulation-HELICSRunner"
+}
