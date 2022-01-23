@@ -6814,7 +6814,7 @@ object triplex_load {
 
 object recorder {
     parent network_node;
-    file output/IEEE_123_feeder_0_swing_node_4.csv;
+    file output/IEEE_123_feeder_0_swing_node_5.csv;
     interval 1;
     in "2013-08-28 00:00:00";
     out "2013-08-29 00:00:00";
@@ -6823,7 +6823,7 @@ object recorder {
 
 object recorder {
     parent ClimateWeather;
-    file output/IEEE_123_feeder_0_climate_4.csv;
+    file output/IEEE_123_feeder_0_climate_5.csv;
     interval 60;
     in "2013-08-28 00:00:00";
     out "2013-08-29 00:00:00";

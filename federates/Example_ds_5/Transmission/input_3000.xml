@@ -112,14 +112,14 @@
         <ss>
           <connectNode> 65 </connectNode>
         </ss>
-        <!-- <ss>
+        <ss>
           <connectNode> 66 </connectNode>
         </ss>
         <ss>
           <connectNode> 67 </connectNode>
-        </ss> -->
+        </ss>
       </connectNodes>
-      <configFile> helics_config_1.json </configFile>
+      <configFile> /home/lei/Desktop/test-helics/federates/Example_ds_5/Transmission/helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>
     </Helics>

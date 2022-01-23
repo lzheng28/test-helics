@@ -54,7 +54,12 @@
   <Dynamic_simulation>
 
     <Helics>
-      <connectNode> 65 </connectNode>
+      <connectNode> 7 </connectNode>
+      <connectNodes>
+        <ss>
+          <connectNode> 65 </connectNode>
+        </ss>
+      </connectNodes>  
       <configFile> helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>

@@ -22,7 +22,7 @@ module tape {
 
 module connection;
 object helics_msg {
-  name IEEE_123_feeder_0;
+  name IEEE_123_feeder_0_1;
   parent network_node;
   configure IEEE_123_feeder_0.json;
 }
@@ -48,7 +48,7 @@ object player {
     property value;
     file include/players/load_shape_player.player;
     loop 14600;
-// Will loop file for 40 years assuming the file has data for a 24 hour period
+// Will loop file for 40 (40*365=14600) years assuming the file has data for a 24 hour period
 };
 
 object climate {

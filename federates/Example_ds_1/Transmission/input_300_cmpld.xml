@@ -57,6 +57,11 @@
 
     <Helics>
       <connectNode> 7 </connectNode>
+      <connectNodes>
+        <ss>
+          <connectNode> 65 </connectNode>
+        </ss>
+      </connectNodes>  
       <configFile> helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>
@@ -76,14 +81,14 @@
         <timeStep>   0.001</timeStep>
       </faultEvent>
     </faultEvents>
-    <generatorWatch>
+    <!-- <generatorWatch>
       <generator>
        <busID> 10063 </busID>
        <generatorID> 1 </generatorID>
       </generator>
     </generatorWatch>
     <generatorWatchFrequency> 1 </generatorWatchFrequency>
-    <generatorWatchFileName> 300bus_cmpld_gridpack_test_gen10063_helics.csv </generatorWatchFileName>
+    <generatorWatchFileName> 300bus_cmpld_gridpack_test_gen10063_helics.csv </generatorWatchFileName> -->
     <LinearSolver>
       <SolutionTolerance>1.0E-12 </SolutionTolerance> 
       <ForceSerial>true</ForceSerial>

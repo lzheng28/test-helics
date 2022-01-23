@@ -66,14 +66,14 @@
         <timeStep>   0.005</timeStep>
       </faultEvent>
     </faultEvents>
-    <!-- <generatorWatch>
+    <generatorWatch>
       <generator>
        <busID> 190 </busID>
        <generatorID> 1 </generatorID>
       </generator>
     </generatorWatch>
     <generatorWatchFrequency> 1 </generatorWatchFrequency>
-    <generatorWatchFileName> np_1_bus3000_gridpack_test_gen190.csv </generatorWatchFileName> -->
+    <generatorWatchFileName> temp_65_bus3000_gridpack_test_gen190.csv </generatorWatchFileName>
     <LinearSolver>
       <SolutionTolerance>1.0E-12 </SolutionTolerance> 
       <ForceSerial>true</ForceSerial>
@@ -110,16 +110,13 @@
       <connectNode> 65 </connectNode>
       <connectNodes>
         <ss>
-          <connectNode> 65 </connectNode>
-        </ss>
-        <ss>
           <connectNode> 66 </connectNode>
         </ss>
         <ss>
           <connectNode> 67 </connectNode>
         </ss>
       </connectNodes>
-      <configFile> /home/lei/Desktop/test-helics/federates/helics_config_1.json </configFile>
+      <configFile> /home/lei/Desktop/test-helics/federates/Example_ds_4/Transmission/helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>
     </Helics>

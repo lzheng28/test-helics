@@ -3,7 +3,7 @@
     "federates":[
         {
             "directory":"./Transmission/",
-            "exec":"/home/lei/Install_package/GridPACK-ds/src/build/applications/hadrec/hadrec.x input_3000.xml",
+            "exec":"mpirun -np 1 /home/lei/package/GridPACK_ds/src/build/applications/hadrec/hadrec.x input_3000.xml",
             "host":"localhost",
             "name":"TransmissionFederate"
         },
@@ -18,12 +18,6 @@
             "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
             "host":"localhost",
             "name":"GridLABDFederate_2"
-        },
-        {
-            "directory":"./Distribution_3/",
-            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
-            "host":"localhost",
-            "name":"GridLABDFederate_3"
         }
     ],
     "name":"T-D-Cosimulation-HELICSRunner"
