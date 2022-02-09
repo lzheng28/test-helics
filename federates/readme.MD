@@ -7,3 +7,5 @@ g++ fed2.cpp -o fed2 -I /home/lei/software/helics-2.6.1/include/ -L /home/lei/so
 2. To run:
 
 Three termimals, run ```./fed1```, ```./fed2```, ```helics_broker -f 2``` respectively.
+
+For Examples in Example_ds_* , please revise hadrec.x path first and then use helics run --path co_sim.json to run it.
