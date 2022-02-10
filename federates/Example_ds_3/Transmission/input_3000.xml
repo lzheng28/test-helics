@@ -66,14 +66,14 @@
         <timeStep>   0.005</timeStep>
       </faultEvent>
     </faultEvents>
-    <generatorWatch>
+    <!-- <generatorWatch>
       <generator>
        <busID> 190 </busID>
        <generatorID> 1 </generatorID>
       </generator>
     </generatorWatch>
     <generatorWatchFrequency> 1 </generatorWatchFrequency>
-    <generatorWatchFileName> temp_65_bus3000_gridpack_test_gen190.csv </generatorWatchFileName>
+    <generatorWatchFileName> temp_65_bus3000_gridpack_test_gen190.csv </generatorWatchFileName> -->
     <LinearSolver>
       <SolutionTolerance>1.0E-12 </SolutionTolerance> 
       <ForceSerial>true</ForceSerial>
@@ -122,6 +122,22 @@
       <configFile> helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>
+      <cosim_time_interval> 1.0 </cosim_time_interval>
     </Helics>
+    <!-- <observations> 
+      <observation> 
+        <type> bus </type>
+        <busID> 65 </busID>
+      </observation>
+      <observation> 
+        <type> bus </type>
+        <busID> 66 </busID>
+      </observation>
+      <observation> 
+        <type> bus </type>
+        <busID> 67 </busID>
+      </observation>
+      <observationFileName> temp_observation_cosim.csv </observationFileName>
+    </observations> -->
   </Dynamic_simulation>
 </Configuration>

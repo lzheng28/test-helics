@@ -116,7 +116,7 @@
           <connectNode> 67 </connectNode>
         </ss>
       </connectNodes>
-      <configFile> /home/lei/Desktop/test-helics/federates/Example_ds_4/Transmission/helics_config_1.json </configFile>
+      <configFile> helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>
     </Helics>

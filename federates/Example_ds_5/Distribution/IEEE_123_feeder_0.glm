@@ -6812,23 +6812,23 @@ object triplex_load {
     impedance_fraction_12 0.990000;
 };
 
-object recorder {
-    parent network_node;
-    file output/IEEE_123_feeder_0_swing_node_5.csv;
-    interval 1;
-    in "2013-08-28 00:00:00";
-    out "2013-08-29 00:00:00";
-    property positive_sequence_voltage,distribution_load;
-};
-
-object recorder {
-    parent ClimateWeather;
-    file output/IEEE_123_feeder_0_climate_5.csv;
-    interval 60;
-    in "2013-08-28 00:00:00";
-    out "2013-08-29 00:00:00";
-    property temperature,humidity;
-};
+// object recorder {
+//     parent network_node;
+//     file output/IEEE_123_feeder_0_swing_node_5.csv;
+//     interval 1;
+//     in "2013-08-28 00:00:00";
+//     out "2013-08-29 00:00:00";
+//     property positive_sequence_voltage,distribution_load;
+// };
+// 
+// object recorder {
+//     parent ClimateWeather;
+//     file output/IEEE_123_feeder_0_climate_5.csv;
+//     interval 60;
+//     in "2013-08-28 00:00:00";
+//     out "2013-08-29 00:00:00";
+//     property temperature,humidity;
+// };
 
 object triplex_load {
     name l2_tn_loadshape;

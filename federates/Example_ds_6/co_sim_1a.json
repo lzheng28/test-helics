@@ -3,7 +3,7 @@
     "federates":[
         {
             "directory":"./Transmission/",
-            "exec":"mpirun -np 16 /home/lei/package/GridPACK_ds/src/build/applications/hadrec/hadrec.x input_3000.xml",
+            "exec":"mpirun -np 16 hadrec.x input_3000.xml",
             "host":"localhost",
             "name":"TransmissionFederate_np_16"
         },
