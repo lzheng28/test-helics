@@ -1,7 +1,7 @@
-for i in {5..15}
+for i in {3..5}
 do
   cp execute.py Example_ds_$i
   cd Example_ds_$i
-  python execute.py > 2-11.log
+  python execute.py > 2-12.log
   cd ..
 done
