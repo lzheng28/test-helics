@@ -15,7 +15,12 @@
 #set deltamode_maximumtime=60000000000	//1 minute
 #set deltamode_iteration_limit=10		//Iteration limit
 
-
+//module connection;
+//object helics_msg {
+//  name IEEE_13;
+//  parent node_650;
+//  configure IEEE13.json;
+//}
 	
 clock {
      timezone PST+8PDT;
@@ -39,27 +44,31 @@ module generators {
 
 
 
-// Phase Conductor for 601: 556,500 26/7 ACSR
-object overhead_line_conductor:6010 {
+// Phase Conductor for 601_ 556,500 26/7 ACSR
+object overhead_line_conductor {
+     name overhead_line_conductor_6010;
 	geometric_mean_radius 0.031300;
 	resistance 0.185900;
 }
 
-// Phase Conductor for 602: 4/0 6/1 ACSR
-object overhead_line_conductor:6020 {
+// Phase Conductor for 602_ 4/0 6/1 ACSR
+object overhead_line_conductor {
+     name overhead_line_conductor_6020;
 	geometric_mean_radius 0.00814;
 	resistance 0.592000;
 }
 
-// Phase Conductor for 603, 604, 605: 1/0 ACSR
-object overhead_line_conductor:6030 {
+// Phase Conductor for 603, 604, 605_ 1/0 ACSR
+object overhead_line_conductor {
+     name overhead_line_conductor_6030;
 	geometric_mean_radius 0.004460;
 	resistance 1.120000;
 }
 
 
-// Phase Conductor for 606: 250,000 AA,CN
-object underground_line_conductor:6060 { 
+// Phase Conductor for 606_ 250,000 AA,CN
+object underground_line_conductor {
+      name underground_line_conductor_6060; 
 	 outer_diameter 1.290000;
 	 conductor_gmr 0.017100;
 	 conductor_diameter 0.567000;
@@ -72,8 +81,9 @@ object underground_line_conductor:6060 {
 	 shield_resistance 0.000000;
 }
 
-// Phase Conductor for 607: 1/0 AA,TS N: 1/0 Cu
-object underground_line_conductor:6070 { 
+// Phase Conductor for 607_ 1/0 AA,TS N_ 1/0 Cu
+object underground_line_conductor {
+      name underground_line_conductor_6070; 
 	 outer_diameter 1.060000;
 	 conductor_gmr 0.011100;
 	 conductor_diameter 0.368000;
@@ -87,7 +97,8 @@ object underground_line_conductor:6070 {
 }
 
 // Overhead line configurations
-object line_spacing:500601 {
+object line_spacing {
+     name line_spacing_500601;
 	distance_AB 2.5;
 	distance_AC 4.5;
 	distance_BC 7.0;
@@ -97,7 +108,8 @@ object line_spacing:500601 {
 }
 
 // Overhead line configurations
-object line_spacing:500602 {
+object line_spacing {
+     name line_spacing_500602;
 	distance_AC 2.5;
 	distance_AB 4.5;
 	distance_BC 7.0;
@@ -106,7 +118,8 @@ object line_spacing:500602 {
 	distance_BN 5.0;
 }
 
-object line_spacing:505603 {
+object line_spacing {
+     name line_spacing_505603;
 	distance_AC 0.0;
 	distance_AB 0.0;
 	distance_BC 7.0;
@@ -115,7 +128,8 @@ object line_spacing:505603 {
 	distance_BN 5.0;
 }
 
-object line_spacing:505604 {
+object line_spacing {
+     name line_spacing_505604;
 	distance_AC 7.0;
 	distance_AB 0.0;
 	distance_BC 0.0;
@@ -124,7 +138,8 @@ object line_spacing:505604 {
 	distance_BN 0.0;
 }
 
-object line_spacing:510 {
+object line_spacing {
+     name line_spacing_510;
 	distance_AC 0.0;
 	distance_AB 0.0;
 	distance_BC 0.0;
@@ -133,44 +148,50 @@ object line_spacing:510 {
 	distance_BN 0.0;
 }
 
-object line_configuration:601 {
-	conductor_A overhead_line_conductor:6010;
-	conductor_B overhead_line_conductor:6010;
-	conductor_C overhead_line_conductor:6010;
-	conductor_N overhead_line_conductor:6020;
-	spacing line_spacing:500601;
+object line_configuration {
+     name line_configuration_601;
+	conductor_A overhead_line_conductor_6010;
+	conductor_B overhead_line_conductor_6010;
+	conductor_C overhead_line_conductor_6010;
+	conductor_N overhead_line_conductor_6020;
+	spacing line_spacing_500601;
 }
 
-object line_configuration:602 {
-	conductor_A overhead_line_conductor:6020;
-	conductor_B overhead_line_conductor:6020;
-	conductor_C overhead_line_conductor:6020;
-	conductor_N overhead_line_conductor:6020;
-	spacing line_spacing:500602;
+object line_configuration {
+     name line_configuration_602;
+	conductor_A overhead_line_conductor_6020;
+	conductor_B overhead_line_conductor_6020;
+	conductor_C overhead_line_conductor_6020;
+	conductor_N overhead_line_conductor_6020;
+	spacing line_spacing_500602;
 }
 
-object line_configuration:603 {
-	conductor_B overhead_line_conductor:6030;
-	conductor_C overhead_line_conductor:6030;
-	conductor_N overhead_line_conductor:6030;
-	spacing line_spacing:505603;
+object line_configuration {
+     name line_configuration_603;
+	conductor_B overhead_line_conductor_6030;
+	conductor_C overhead_line_conductor_6030;
+	conductor_N overhead_line_conductor_6030;
+	spacing line_spacing_505603;
 }
 
-object line_configuration:604 {
-	conductor_A overhead_line_conductor:6030;
-	conductor_C overhead_line_conductor:6030;
-	conductor_N overhead_line_conductor:6030;
-	spacing line_spacing:505604;
+object line_configuration {
+     name line_configuration_604;
+	conductor_A overhead_line_conductor_6030;
+	conductor_C overhead_line_conductor_6030;
+	conductor_N overhead_line_conductor_6030;
+	spacing line_spacing_505604;
 }
 
-object line_configuration:605 {
-	conductor_C overhead_line_conductor:6030;
-	conductor_N overhead_line_conductor:6030;
-	spacing line_spacing:510;
+object line_configuration {
+     name line_configuration_605;
+	conductor_C overhead_line_conductor_6030;
+	conductor_N overhead_line_conductor_6030;
+	spacing line_spacing_510;
 }
 
 //Underground line configuration
-object line_spacing:515 {
+object line_spacing {
+      name line_spacing_515;
 	 distance_AB 0.500000;
 	 distance_BC 0.500000;
 	 distance_AC 1.000000;
@@ -179,7 +200,8 @@ object line_spacing:515 {
 	 distance_CN 0.000000;
 }
 
-object line_spacing:520 {
+object line_spacing {
+      name line_spacing_520;
 	 distance_AB 0.000000;
 	 distance_BC 0.000000;
 	 distance_AC 0.000000;
@@ -188,119 +210,121 @@ object line_spacing:520 {
 	 distance_CN 0.000000;
 }
 
-object line_configuration:606 {
-	 conductor_A underground_line_conductor:6060;
-	 conductor_B underground_line_conductor:6060;
-	 conductor_C underground_line_conductor:6060;
-	 spacing line_spacing:515;
+object line_configuration {
+      name line_configuration_606;
+	 conductor_A underground_line_conductor_6060;
+	 conductor_B underground_line_conductor_6060;
+	 conductor_C underground_line_conductor_6060;
+	 spacing line_spacing_515;
 }
 
-object line_configuration:607 {
-	 conductor_A underground_line_conductor:6070;
-	 conductor_N underground_line_conductor:6070;
-	 spacing line_spacing:520;
+object line_configuration {
+      name line_configuration_607;
+	 conductor_A underground_line_conductor_6070;
+	 conductor_N underground_line_conductor_6070;
+	 spacing line_spacing_520;
 }
 
 // Define line objects
-object overhead_line:632645 {
+object overhead_line {
      phases "BCN";
-     name 632-645;
-     from node:632;
-     to load:645;
+     name overhead_line_632-645;
+     from node_632;
+     to load_645;
      length 500;
-     configuration line_configuration:603;
+     configuration line_configuration_603;
 }
 
-object overhead_line:645646 {
+object overhead_line {
      phases "BCN";
-     name 645-646;
-     from load:645;
-     to load:646;
+     name overhead_line_645-646;
+     from load_645;
+     to load_646;
      length 300;
-     configuration line_configuration:603;
+     configuration line_configuration_603;
 }
 
-object overhead_line:630632 {
+object overhead_line {
      phases "ABCN";
-     name 630-632;
-     from node:630;
-     to node:632;
+     name overhead_line_630-632;
+     from node_630;
+     to node_632;
      length 2000;
-     configuration line_configuration:601;
+     configuration line_configuration_601;
 }
 
 //Split line for distributed load
-object overhead_line:6326321 {
+object overhead_line {
      phases "ABCN";
-     name 632-6321;
-     from node:632;
-     to load:6321;
+     name overhead_line_632-6321;
+     from node_632;
+     to load_6321;
      length 500;
-     configuration line_configuration:601;
+     configuration line_configuration_601;
 }
 
-object overhead_line:6321671 {
+object overhead_line {
      phases "ABCN";
-     name 6321-671;
-     from load:6321;
+     name overhead_line_6321-671;
+     from load_6321;
      to nd671;
      length 1500;
-     configuration line_configuration:601;
+     configuration line_configuration_601;
 }
 //End split line
 
-object overhead_line:671680 {
+object overhead_line {
      phases "ABCN";
-     name 671-680;
+     name overhead_line_671-680;
      from nd671;
-     to node:680;
+     to node_680;
      length 1000;
-     configuration line_configuration:601;
+     configuration line_configuration_601;
 }
 
-object overhead_line:671684 {
+object overhead_line {
      phases "ACN";
-     name 671-684;
+     name overhead_line_671-684;
      from nd671;
-     to node:684;
+     to node_684;
      length 300;
-     configuration line_configuration:604;
+     configuration line_configuration_604;
 }
 
- object overhead_line:684611 {
+ object overhead_line {
       phases "CN";
-      name 684-611;
-      from node:684;
-      to load:611;
+      name overhead_line_684-611;
+      from node_684;
+      to load_611;
       length 300;
-      configuration line_configuration:605;
+      configuration line_configuration_605;
 }
 
-object underground_line:684652 {
+object underground_line {
       phases "AN";
-      name 684-652;
-      from node:684;
-      to load:652;
+      name underground_line_684-652;
+      from node_684;
+      to load_652;
       length 800;
-      configuration line_configuration:607;
+      configuration line_configuration_607;
 }
 
-object underground_line:692675 {
+object underground_line {
      phases "ABC";
-     name 692-675;
-     from load:692;
-     to load:675;
+     name underground_line_692-675;
+     from load_692;
+     to load_675;
      length 500;
-     configuration line_configuration:606;
+     configuration line_configuration_606;
 }
 
-object overhead_line:632633 {
+object overhead_line {
      phases "ABCN";
-     name 632-633;
-     from node:632;
-     to node:633;
+     name overhead_line_632-633;
+     from node_632;
+     to node_633;
      length 500;
-     configuration line_configuration:602;
+     configuration line_configuration_602;
 }
 
 
@@ -308,8 +332,8 @@ object overhead_line:632633 {
 
 
 // Create node objects
-object node:633 {
-     name 633;
+object node {
+     name node_633;
      phases "ABCN";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -317,8 +341,8 @@ object node:633 {
      nominal_voltage 2401.7771;
 }
 
-object node:630 {
-     name 630;
+object node {
+     name node_630;
      phases "ABCN";
      voltage_A 2401.7771+0j;
      voltage_B -1200.8886-2080.000j;
@@ -326,8 +350,8 @@ object node:630 {
      nominal_voltage 2401.7771;
 }
  
-object node:632 {
-     name 632;
+object node {
+     name node_632;
      phases "ABCN";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -335,8 +359,8 @@ object node:632 {
      nominal_voltage 2401.7771;
 }
 
-object node:650 {
-      name 650;
+object meter {
+      name node_650;
       phases "ABCN";
       voltage_A 2401.7771;
       voltage_B -1200.8886-2080.000j;
@@ -346,8 +370,8 @@ object node:650 {
 	 flags DELTAMODE;
 } 
  
-object node:680 {
-       name 680;
+object node {
+       name node_680;
        phases "ABCN";
        voltage_A 2401.7771;
        voltage_B -1200.8886-2080.000j;
@@ -358,8 +382,8 @@ object node:680 {
 
 
  
-object node:684 {
-      name 684;
+object node {
+      name node_684;
       phases "ACN";
       voltage_A 2401.7771;
       voltage_B -1200.8886-2080.000j;
@@ -401,8 +425,8 @@ object node {
 
 //Load object play back 
 
-object load:634 {
-     name 634;
+object load {
+     name load_634;
      phases "ABCN";
      voltage_A 480.000+0j;
      voltage_B -240.000-415.6922j;
@@ -414,8 +438,8 @@ object load:634 {
 	
 }
  
-object load:645 {
-     name 645;
+object load {
+     name load_645;
      phases "BCN";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -426,8 +450,8 @@ object load:645 {
 	
 }
  
-object load:646 {
-     name 646;
+object load {
+     name load_646;
      phases "BCD";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -438,8 +462,8 @@ object load:646 {
 }
  
  
-object load:652 {
-     name 652;
+object load {
+     name load_652;
      phases "AN";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -451,8 +475,8 @@ object load:652 {
  
 
 
-object load:671 {
-	 name  671;
+object load {
+	 name  load_671;
 	 parent nd671;
 	 phases "ABC";
 	 voltage_A 2401.7771;
@@ -495,15 +519,15 @@ object load:671 {
 //   from meter671;
 //   phases ABCN;
 //   from meter671;
-//   to load:671;
+//   to load_671;
 //   length 20;
-//   configuration line_configuration:601;
+//   configuration line_configuration_601;
 //}
 
 
  
-object load:675 {
-     name 675;
+object load {
+     name load_675;
      phases "ABC";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -519,8 +543,8 @@ object load:675 {
     	
 }
  
-object load:692 {
-     name 692;
+object load {
+     name load_692;
      phases "ABCD";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -532,8 +556,8 @@ object load:692 {
 	
 }
  
-object load:611 {
-     name 611;
+object load {
+     name load_611;
      phases "CN";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -545,9 +569,9 @@ object load:611 {
 }
  
 // distributed load between node 632 and 671
-// 2/3 of load 1/4 of length down line: Kersting p.56
-object load:6711 {
-     name 6711;
+// 2/3 of load 1/4 of length down line_ Kersting p.56
+object load {
+     name load_6711;
      parent nd671;
      phases "ABC";
      voltage_A 2401.7771;
@@ -560,8 +584,8 @@ object load:6711 {
   	
 }
 
-object load:6321 {
-     name 6321;
+object load {
+     name load_6321;
      phases "ABCN";
      voltage_A 2401.7771;
      voltage_B -1200.8886-2080.000j;
@@ -575,11 +599,11 @@ object load:6321 {
 
  
 // Switch
-object switch:671692 {
+object switch {
      phases "ABCN";
-     name 671692;
+     name switch_671692;
      from nd671;
-     to load:692;
+     to load_692;
      status CLOSED;
 	 flags DELTAMODE;
 	 object recorder {
@@ -596,7 +620,8 @@ object switch:671692 {
 }
  
 // Transformer
-object transformer_configuration:400 {
+object transformer_configuration {
+     name transformer_configuration_400;
 	connect_type WYE_WYE;
   	install_type PADMOUNT;
   	power_rating 500;
@@ -606,12 +631,12 @@ object transformer_configuration:400 {
   	reactance 0.02;
 }
   
-object transformer:633634 {
+object transformer {
   	phases "ABCN";
-  	name 633-634;
-  	from node:633;
-  	to load:634;
-  	configuration transformer_configuration:400;
+  	name transformer_633-634;
+  	from node_633;
+  	to load_634;
+  	configuration transformer_configuration_400;
 }
 
 
@@ -620,10 +645,10 @@ object transformer:633634 {
 object overhead_line {
    name LineDG692;
    phases ABCN;
-   from load:692;
+   from load_692;
    to DG692;
    length 20;
-   configuration line_configuration:601;
+   configuration line_configuration_601;
    object recorder {
     name LineDG692Record;
 	
@@ -675,7 +700,8 @@ object diesel_dg {
 
  
 // Regulator
-object regulator_configuration:6506321 {
+object regulator_configuration {
+     name regulator_configuration_6506321;
 	connect_type 1;
 	band_center 122.000;
 	band_width 2.0;
@@ -700,11 +726,12 @@ object regulator_configuration:6506321 {
 	tap_pos_C 11;
 }
   
-object regulator:650630 {
+object regulator {
+      name regulator_650630;
 	 phases "ABC";
-	 from node:650;
-	 to node:630;
-	 configuration regulator_configuration:6506321;
+	 from node_650;
+	 to node_630;
+	 configuration regulator_configuration_6506321;
 }
 
 
@@ -718,10 +745,18 @@ object regulator:650630 {
 //Recorder Node
 object recorder{
    name LoadVoltage;
-   parent 671;
+   parent load_671;
    property voltage_A.real,voltage_A.imag,voltage_B.real,voltage_B.imag,voltage_C.real,voltage_C.imag;
    file Load671VoltageConstant_I.csv;
    flags DELTAMODE;
    interval 0;
    limit 0;
 }
+
+object recorder {
+    parent node_650;
+    file IEEE_13_feeder_swing_node.csv;
+    interval 0;
+    property measured_power;
+    flags DELTAMODE;
+};

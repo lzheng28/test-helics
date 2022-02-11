@@ -23,7 +23,7 @@
     }],
 
     "subscriptions": [{
-        "key": "IEEE_123_feeder_0/totalLoad",
+        "key": "IEEE_13/totalLoad",
         "type": "complex",
         "required": true
     }]

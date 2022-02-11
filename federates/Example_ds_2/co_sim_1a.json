@@ -3,9 +3,9 @@
     "federates":[
         {
             "directory":"./Transmission/",
-            "exec":"/home/lei/package/GridPACK_ds/src/build/applications/hadrec/hadrec.x input_145.xml",
+            "exec":"mpirun -np 1 hadrec.x input_145.xml",
             "host":"localhost",
-            "name":"TransmissionFederate"
+            "name":"TransmissionFederate_np_1"
         },
         {
             "directory":"./Distribution/",
