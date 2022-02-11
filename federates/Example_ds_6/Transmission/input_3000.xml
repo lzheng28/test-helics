@@ -110,7 +110,7 @@
       <connectNode> 65 </connectNode>
       <connectNodes>
         <ss>
-          <connectNode> 65 </connectNode>
+          <connectNode> 1300 </connectNode>
         </ss>
         <ss>
           <connectNode> 66 </connectNode>
@@ -122,7 +122,7 @@
           <connectNode> 68 </connectNode>
         </ss>
         <ss>
-          <connectNode> 69 </connectNode>
+          <connectNode> 1101 </connectNode>
         </ss>
         <ss>
           <connectNode> 70 </connectNode>
@@ -137,7 +137,7 @@
           <connectNode> 73 </connectNode>
         </ss>
         <ss>
-          <connectNode> 174 </connectNode>
+          <connectNode> 1401 </connectNode>
         </ss>
       </connectNodes>
       <configFile> helics_config_1.json </configFile>
