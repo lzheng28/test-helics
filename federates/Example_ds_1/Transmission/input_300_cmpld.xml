@@ -8,7 +8,7 @@
     <LinearSolver>
       <SolutionTolerance>1.0E-11 </SolutionTolerance> 
       <PETScOptions>
-        <!-ksp_view>
+        <!--ksp_view-->
         -ksp_type richardson
         -pc_type lu
         -pc_factor_mat_solver_package superlu_dist
@@ -46,10 +46,10 @@
         -ksp_type bicg
         -pc_type bjacobi
         -sub_pc_type ilu -sub_pc_factor_levels 5 -sub_ksp_type preonly
-        <!-snes_view
+        <!--snes_view
         -snes_monitor
         -ksp_monitor
-        -ksp_view>
+        -ksp_view-->
       </PETScOptions>
     </NonlinearSolver>
   </Powerflow>
@@ -59,26 +59,27 @@
       <connectNode> 7 </connectNode>
       <connectNodes>
         <ss>
-          <connectNode> 65 </connectNode>
+          <connectNode> 7 </connectNode>
         </ss>
       </connectNodes>  
       <configFile> helics_config_1.json </configFile>
       <loadAmplifier> 15 </loadAmplifier>
       <useHelics> true </useHelics>
+      <cosim_time_interval> 1.0 </cosim_time_interval>
     </Helics>
 
     <!--<networkConfiguration> IEEE3G9B_V23.raw </networkConfiguration>-->
     <!--generatorParameters> 300bus_detail_model_cmpld_motorW.dyr </generatorParameters-->
     <generatorParameters> 300bus_detail_model_cmpld_combine.dyr </generatorParameters>
     <simulationTime>20</simulationTime>
-    <timeStep>0.001</timeStep>
+    <timeStep>0.005</timeStep>
     <faultEvents>
       <faultEvent>
         <beginFault> 2.02</beginFault>
         <endFault>   2.06</endFault>
         <faultBranch>90  92</faultBranch>
 
-        <timeStep>   0.001</timeStep>
+        <timeStep>   0.005</timeStep>
       </faultEvent>
     </faultEvents>
     <!-- <generatorWatch>
@@ -121,5 +122,12 @@
       </PETScOptions>
       -->
     </LinearMatrixSolver>
+    <observations> 
+      <observation> 
+        <type> bus </type>
+        <busID> 64 </busID>
+      </observation>
+      <observationFileName> 300_observation_cosim.csv </observationFileName>
+    </observations>
   </Dynamic_simulation>
 </Configuration>
