@@ -1,7 +1,7 @@
 clock {
     timezone PST8;
     starttime '2013-08-28 00:00:00';
-    stoptime '2013-08-28 00:00:20';
+    stoptime '2013-08-28 00:00:05';
 }
 
 #include "include/schedules/appliance_schedules.glm";

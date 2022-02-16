@@ -71,7 +71,7 @@
     <!--<networkConfiguration> IEEE3G9B_V23.raw </networkConfiguration>-->
     <!--generatorParameters> 300bus_detail_model_cmpld_motorW.dyr </generatorParameters-->
     <generatorParameters> 300bus_detail_model_cmpld_combine.dyr </generatorParameters>
-    <simulationTime>20</simulationTime>
+    <simulationTime>5</simulationTime>
     <timeStep>0.005</timeStep>
     <faultEvents>
       <faultEvent>
