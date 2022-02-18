@@ -3,9 +3,9 @@
     "federates":[
         {
             "directory":"./Transmission/",
-            "exec":"mpirun -np 8 hadrec.x input_3000.xml",
+            "exec":"mpirun -np 1 hadrec.x input_3000.xml",
             "host":"localhost",
-            "name":"TransmissionFederate_np_8"
+            "name":"TransmissionFederate_np_1"
         },
         {
             "directory":"./Distribution/",
