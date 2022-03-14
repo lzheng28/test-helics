@@ -1,0 +1,30 @@
+{
+    "broker": true,
+    "federates":[
+        {
+            "directory":"./Transmission/",
+            "exec":"mpirun -np 1 hadrec.x input_3000.xml",
+            "host":"localhost",
+            "name":"TransmissionFederate_1"
+        },
+        {
+            "directory":"./Distribution/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate"
+        },
+        {
+            "directory":"./Distribution_2/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_2"
+        },
+        {
+            "directory":"./Distribution_3/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_3"
+        }
+    ],
+    "name":"T-D-Cosimulation-HELICSRunner"
+}

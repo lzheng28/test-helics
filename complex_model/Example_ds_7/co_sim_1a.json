@@ -1,0 +1,132 @@
+{
+    "broker": true,
+    "federates":[
+        {
+            "directory":"./Transmission/",
+            "exec":"mpirun -np 1 hadrec.x input_3000.xml",
+            "host":"localhost",
+            "name":"TransmissionFederate_np_1"
+        },
+        {
+            "directory":"./Distribution/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate"
+        },
+        {
+            "directory":"./Distribution_2/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_2"
+        },
+        {
+            "directory":"./Distribution_3/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_3"
+        },
+        {
+            "directory":"./Distribution_4/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_4"
+        },
+        {
+            "directory":"./Distribution_5/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_5"
+        },
+        {
+            "directory":"./Distribution_6/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_6"
+        },
+        {
+            "directory":"./Distribution_7/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_7"
+        },
+        {
+            "directory":"./Distribution_8/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_8"
+        },
+        {
+            "directory":"./Distribution_9/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_9"
+        },
+        {
+            "directory":"./Distribution_10/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_10"
+        },
+        {
+            "directory":"./Distribution_11/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_11"
+        },
+        {
+            "directory":"./Distribution_12/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_12"
+        },
+        {
+            "directory":"./Distribution_13/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_13"
+        },
+        {
+            "directory":"./Distribution_14/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_14"
+        },
+        {
+            "directory":"./Distribution_15/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_15"
+        },
+        {
+            "directory":"./Distribution_16/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_16"
+        },
+        {
+            "directory":"./Distribution_17/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_17"
+        },
+        {
+            "directory":"./Distribution_18/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_18"
+        },
+        {
+            "directory":"./Distribution_19/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_19"
+        },
+        {
+            "directory":"./Distribution_20/",
+            "exec":"gridlabd.sh IEEE_123_feeder_0.glm",
+            "host":"localhost",
+            "name":"GridLABDFederate_20"
+        }
+    ],
+    "name":"T-D-Cosimulation-HELICSRunner"
+}
